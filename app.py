@@ -7,26 +7,20 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+    # return '<h1>Landing Page</h1>'
     # return render_template('index.html')
     # return render_template('index.html', title='Landing Page')
 
 
 # @app.route('/about')
 # def about():
-#     return 'About'    
-#     # return '<h1>About Page</h1>'
-#     # return render_template('about.html', title='About')
+#     # return 'About'
+#     return render_template('about.html', title='About')
 
 
 # @app.route('/home')
 # def home():
 #     return render_template('home.html')
-#     # return render_template('home.html')
-
-
-# @app.route('/users')
-# def users():
-#     return render_template('users.html', userData=userData, title='Users')
 
 # userData = [
 #     {
@@ -46,7 +40,12 @@ def hello_world():
 #     }
 # ]
 
-#collect user input
+# @app.route('/users')
+# def users():
+#     return render_template('users.html', userData=userData, title='Users')
+
+
+# #collect user input
 # @app.route('/form', methods=['GET', 'POST'])
 # def form():
 #     if request.method == 'GET':
@@ -58,5 +57,5 @@ def hello_world():
 
 
 # @app.route('/us-cum-deaths', methods=['GET'])
-# def us_inc_deaths():
+# def us_cum_deaths():
 #     return get_us_cum_deaths()
