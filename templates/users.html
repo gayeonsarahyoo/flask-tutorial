@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row cards">
+        {% if userData %}
+            {% for data in userData %}
+                <div class="card col-sm-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ data.username }}</h5>
+                        <h6 class="card-text">Age: {{ data.age }}</h6>
+                        <h6 class="card-text">Membership: {{ data.membership }}</h6>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+                <p>Data not available.</p>
+        {% endif %}
+    </div>
+{% endblock %}
